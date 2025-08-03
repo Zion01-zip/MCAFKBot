@@ -1,8 +1,9 @@
 const mineflayer = require('mineflayer')
 
 const bot = mineflayer.createBot({
-    host: 'Lys_DeaDtest.aternos.me', // Replace with your server address
-    username: 'LysBotAFK', 
+    host: 'REIGNOFKINGS4.aternos.me', // Replace with your server address
+    port: '55997', // <<< ADD THIS LINE
+    username: 'STAFF', 
     version: '1.20.1', // Replace with your server version
     auth: 'offline', // Make your world cracked friendly
     checkTimeoutInterval: 300*1000 // Set a timeout to check if the bot is still connected (default is 5 minutes)
@@ -19,9 +20,5 @@ const welcome = async () => {
 
     welcome();
 }
-const advertise = () => {
-    bot.chat('AFK Bot By Lys_DeaD');
-}
 
-bot.on('spawn', advertise)
 bot.on('spawn', welcome)
